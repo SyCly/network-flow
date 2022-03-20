@@ -1,5 +1,5 @@
 #Silas Clymer 4/1/21
-
+#Basic Ford Fulkerson algorithm to determine maximum flow from "source" to "sink" of some transportation network (modeled as a graph G with directional edges)
 
 #Source: https://www.python.org/doc/essays/graphs/
 def find_paths(graph, start, end, path=[]):
@@ -44,14 +44,14 @@ def max_flow(Gf):
 
 #example of G stored as dictionary of dictionaries
 G = {
-    's': {'A': 1, 'B': 1, 'C': 1},
+    's': {'A': 1, 'B': 1, 'C': 1}, #s is the source node
     'A': {'E': 1},
     'B': {'E': 1},
     'C': {'D': 1, 'F': 1},
     'D': {'t': 1},
     'E': {'t': 1},
     'F': {'t': 1},
-    't': {}
+    't': {}         #t is the sink node
     }
 def describe(G):
     for node in G:
